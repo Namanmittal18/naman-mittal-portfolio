@@ -15,43 +15,27 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>iOS Developer Intern</h4>
+                <h5>Infosys Ltd., Mysuru</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2026</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Contributed to a Fleet Management System by implementing vehicle management, maintenance and role-based workflow features.<br />
+              <b>Worked with:</b> Git, Jira, Xcode, Agile development.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>iOS Student Developer Program</h4>
+                <h5>Apple × Infosys</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2025 - 2026</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
-              </div>
-              <h3>NOW</h3>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Selected from more than 2,000 applicants for the one-year Apple × Infosys iOS Development Student Program. Collaborated in a four-member team to design and develop Talkables, following the software development lifecycle from requirements and prototyping through testing and iteration.<br />
+              <b>Technologies/practices:</b> Swift, SwiftUI, Git, UI/UX, Sprint planning, SDLC.
             </p>
           </div>
         </div>
