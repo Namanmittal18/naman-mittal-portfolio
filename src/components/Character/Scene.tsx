@@ -53,6 +53,8 @@ const Scene = () => {
       let progress = setProgress((value) => setLoading(value));
       const { loadCharacter } = setCharacter(renderer, scene, camera);
 
+      const uiLoadedPromise = progress.loaded();
+
       loadCharacter().then((gltf) => {
         if (gltf) {
           const animations = setAnimations(gltf);
@@ -63,7 +65,7 @@ const Scene = () => {
           scene.add(character);
           headBone = character.getObjectByName("spine006") || null;
           screenLight = character.getObjectByName("screenlight") || null;
-          progress.loaded().then(() => {
+          uiLoadedPromise.then(() => {
             setTimeout(() => {
               light.turnOnLights();
               animations.startIntro();

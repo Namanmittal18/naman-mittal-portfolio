@@ -16,6 +16,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
   const [isDesktopView, setIsDesktopView] = useState<boolean>(
     window.innerWidth > 1024
   );
+  const [loadTechStack, setLoadTechStack] = useState<boolean>(false);
 
   useEffect(() => {
     const resizeHandler = () => {
@@ -27,6 +28,26 @@ const MainContainer = ({ children }: PropsWithChildren) => {
     return () => {
       window.removeEventListener("resize", resizeHandler);
     };
+  }, [isDesktopView]);
+
+  useEffect(() => {
+    if (!isDesktopView) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setLoadTechStack(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "1500px" } // Load it when 1500px away
+    );
+
+    const workSection = document.getElementById("work");
+    if (workSection) {
+      observer.observe(workSection);
+    }
+
+    return () => observer.disconnect();
   }, [isDesktopView]);
 
   return (
@@ -43,7 +64,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <WhatIDo />
             <Career />
             <Work />
-            {isDesktopView && (
+            {isDesktopView && loadTechStack && (
               <Suspense fallback={<div>Loading....</div>}>
                 <TechStack />
               </Suspense>
